@@ -1,0 +1,145 @@
+/* =========================
+   GLOBAL RESET & FONT
+========================= */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* =========================
+   BODY BACKGROUND FIX
+========================= */
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #6f42c1, #5a32a3);
+}
+
+/* =========================
+   LOGIN WRAPPER (SIZE & CENTER)
+========================= */
+
+.login-wrapper {
+    width: 100%;
+    max-width: 380px;      /* login box kecil & kemas */
+    margin: auto;
+}
+
+/* =========================
+   CARD STYLE
+========================= */
+
+.card {
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 30px rgba(90, 50, 163, 0.25);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+/* =========================
+   TITLE & ICON
+========================= */
+
+.card-body h1 {
+    font-weight: 700;
+    color: #5a32a3;
+}
+
+.card-body p {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.card-body i {
+    color: #6f42c1;
+}
+
+/* =========================
+   FORM INPUT
+========================= */
+
+.form-control-user {
+    height: 45px;
+    border-radius: 10px;
+    font-size: 14px;
+    padding-left: 15px;
+    background-color: #f4f1fa;
+    border: 1px solid #d6c9f0;
+}
+
+.form-control-user:focus {
+    background-color: #ffffff;
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.15rem rgba(111, 66, 193, 0.25);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-user {
+    height: 45px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6f42c1, #5a32a3);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-user:hover {
+    background: linear-gradient(135deg, #5a32a3, #6f42c1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(111, 66, 193, 0.45);
+}
+
+/* =========================
+   CHECKBOX
+========================= */
+
+.custom-control-label {
+    cursor: pointer;
+    color: #6c757d;
+}
+
+/* =========================
+   ALERT MESSAGE
+========================= */
+
+.alert {
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+
+.login-wrapper small {
+    font-size: 12px;
+    color: #e0d9f5;
+}
+
+/* =========================
+   RESPONSIVE (MOBILE)
+========================= */
+
+@media (max-width: 576px) {
+    .login-wrapper {
+        max-width: 90%;
+    }
+
+    .card-body {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,193 @@
+/* =========================
+   COLORS
+========================= */
+:root {
+    --primary-purple: #68568a;
+    --secondary-gray: #6c757d;
+    --light-gray: #f8f9fa;
+    --dark-gray: #2c2c54;
+    --hover-purple: #5a32a3;
+    --card-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   BODY & FONT
+========================= */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+/* =========================
+   SIDEBAR (OVERRIDE SB-ADMIN-2)
+========================= */
+.sidebar.sidebar-dark {
+    background: linear-gradient(180deg, var(--primary-purple), var(--secondary-gray)) !important;
+}
+
+.sidebar.sidebar-dark .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.sidebar.sidebar-dark .nav-link:hover {
+    background-color: rgba(255,255,255,0.15) !important;
+}
+
+.sidebar .sidebar-brand {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.topbar .nav-link {
+    color: var(--dark-gray) !important;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.topbar .nav-link:hover {
+    color: var(--primary-purple) !important;
+}
+
+/* =========================
+   CARDS
+========================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card-header {
+    background: linear-gradient(90deg, var(--primary-purple), var(--secondary-gray));
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    background-color: #ffffff;
+}
+
+.table th {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.table td {
+    font-weight: 500;
+    text-align: center;
+    color: var(--dark-gray);
+    padding: 12px 15px;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.table tr:hover {
+    background-color: rgba(104, 86, 138, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-purple);
+    border-color: var(--hover-purple);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-gray);
+    border-color: var(--secondary-gray);
+    border-radius: 8px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.sticky-footer {
+    color: #745b84 !important;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal-header {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.modal-footer .btn-primary {
+    background-color: var(--primary-purple);
+}
+
+/* =========================
+   RESPONSIVE TABLE & CARD
+========================= */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+}
+.card-header {
+    color: #ffffff !important;
+}
+/* =========================
+   SIDEBAR LINK HOVER
+========================= */
+#wrapper .sidebar .nav-link {
+    transition: background-color 0.25s ease, padding-left 0.25s ease;
+}
+
+#wrapper .sidebar .nav-link:hover {
+    padding-left: 22px;
+}
+

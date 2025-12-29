@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PROGRESS OVERVIEW</title>
+
+    <!-- Fonts -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 CSS -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/charts.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+<div id="wrapper">
+
+    <!-- SIDEBAR -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3">INTERNSHIP TRACKER</div>
+        </a>
+
+        <hr class="sidebar-divider my-0">
+
+        <li class="nav-item active">
+            <a class="nav-link" href="dashboard.php">
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <hr class="sidebar-divider">
+
+        <li class="nav-item">
+            <a class="nav-link" href="company.html">
+                <i class="fas fa-fw fa-building"></i>
+                <span>About Company</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="logbook.html">
+                <i class="fas fa-fw fa-book"></i>
+                <span>Logbook</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Progress Overview</span>
+            </a>
+        </li>
+
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+    <!-- END SIDEBAR -->
+
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+
+            <!-- TOPBAR -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logbook.html">Logbook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="company.html">About Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="charts.html">Progress Overview</a></li>
+
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span class="mr-2 text-gray-600 small">Syanizzayu Iqhlas</span>
+                            <img class="img-profile rounded-circle" src="img/mygambar.jpeg">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END TOPBAR -->
+
+            <!-- PAGE CONTENT -->
+            <div class="container-fluid">
+                <div class="row align-items-stretch"></div>
+
+                <!-- ROW 1 -->
+                <div class="row">
+
+                    <!-- AREA CHART -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Weekly Log Progress</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-area">
+                                    <canvas id="myAreaChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PIE CHART -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Log Status Distribution</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2"><i class="fas fa-circle text-primary"></i> Submitted</span>
+                                    <span class="mr-2"><i class="fas fa-circle text-success"></i> Approved</span>
+                                    <span class="mr-2"><i class="fas fa-circle text-info"></i> Pending</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="row">
+
+                    <!-- PROGRESS -->
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Internship Activities Progress</h6>
+                            </div>
+                            <div class="card-body">
+
+                                <h4 class="small font-weight-bold">Weekly Report <span class="float-right">20%</span></h4>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" style="width:20%"></div>
+                                </div>
+
+                                <h4 class="small font-weight-bold">Supervisor Review <span class="float-right">40%</span></h4>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width:40%"></div>
+                                </div>
+
+                                <h4 class="small font-weight-bold">Final Report <span class="float-right">60%</span></h4>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width:60%"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END PAGE CONTENT -->
+
+        </div>
+        <!-- END CONTENT -->
+
+        <!-- FOOTER -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto text-center">
+                <span>© Syanizzayu 2025</span>
+            </div>
+        </footer>
+
+    </div>
+    <!-- END CONTENT WRAPPER -->
+
+</div>
+<!-- END WRAPPER -->
+
+<!-- LOGOUT MODAL -->
+<div class="modal fade" id="logoutModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ready to Leave?</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">Select "Logout" to end your session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.php">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
+<script src="vendor/chart.js/Chart.min.js"></script>
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+</html>

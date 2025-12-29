@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Internship Tracker</title>
+
+    <!-- Fonts & Icons -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <!-- SB Admin 2 CSS -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/logbook.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+<div id="wrapper">
+
+    <!-- SIDEBAR -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3">INTERNSHIP TRACKER</div>
+        </a>
+
+        <hr class="sidebar-divider my-0">
+
+        <li class="nav-item active">
+            <a class="nav-link" href="dashboard.php">
+          
+                <span>Dashboard</span>
+            </a>
+        </li>
+
+        <hr class="sidebar-divider">
+
+        <li class="nav-item">
+            <a class="nav-link" href="company.html">
+                <i class="fas fa-fw fa-building"></i>
+                <span>About Company</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="logbook.html">
+                <i class="fas fa-fw fa-book"></i>
+                <span>Logbook</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+                <i class="fas fa-fw fa-chart-area"></i>
+                <span>Progress Overview</span>
+            </a>
+        </li>
+
+        <hr class="sidebar-divider d-none d-md-block">
+
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    </ul>
+    <!-- END SIDEBAR -->
+
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <div id="content">
+
+            <!-- TOPBAR -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.php">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logbook.html">Logbook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="company.html">About Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="charts.html">Progress Overview</a></li>
+
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span class="mr-2 text-gray-600 small">Syanizzayu Iqhlas</span>
+                            <img class="img-profile rounded-circle"src="img/mygambar.jpeg">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- END TOPBAR -->
+
+
+            <!-- PAGE CONTENT -->
+            <div class="container-fluid">
+
+                <!-- SUBMIT LOG -->
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-8">
+                        <div class="card shadow">
+                            <div class="card-header font-weight-bold text-primary">
+                                Submit Internship Log
+                            </div>
+                            <div class="card-body">
+                                <form method="post">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <input type="date" name="log_date" class="form-control" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Activity Description</label>
+                                        <textarea name="activity" class="form-control" rows="3" required></textarea>
+                                    </div>
+
+                                    <button type="submit" name="submit_log" class="btn btn-primary btn-block">
+                                        Submit Log
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LOGBOOK TABLE -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="card shadow-sm">
+                            <div class="card-header font-weight-bold text-center">
+                                Logbook Records
+                            </div>
+                            <div class="card-body p-0">
+                                <table class="table table-bordered table-striped mb-0 text-center">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Activity</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20 Dec 2025</td>
+                                            <td>Worked on project report</td>
+                                            <td><span class="badge badge-success">Approved</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>23 Dec 2025</td>
+                                            <td>Team meeting and discussion</td>
+                                            <td><span class="badge badge-success">Approved</span></td>
+                                        </tr>
+                                            <tr>
+                                            <td>25 Dec 2025</td>
+                                            <td>Research on new technology</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                        </tr>
+                                         </tr>
+                                            <tr>
+                                            <td>28 Dec 2025</td>
+                                            <td>Update system data</td>
+                                            <td><span class="badge badge-success">Approved</span></td>
+                                        </tr>
+                                            <tr>
+                                            <td>30 Dec 2025</td>
+                                            <td>Meeting with the supervisor</td>
+                                            <td><span class="badge badge-warning">Pending</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END PAGE CONTENT -->
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto text-center">
+                <span>© Syanizzayu 2025</span>
+            </div>
+        </footer>
+
+
+
+<div class="modal fade" id="logoutModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Ready to Leave?</h5>
+                <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">Select "Logout" to end your session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.php">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/sb-admin-2.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* ======================================
+   PURPLE THEME – CREATE ACCOUNT (REGISTER)
+   ====================================== */
+
+/* BACKGROUND */
+body.bg-gradient-primary {
+    background-color: #6f42c1 !important;
+    background-image: none !important;
+}
+
+/* REGISTER CARD */
+.card {
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(111, 66, 193, 0.3);
+    background-color: #ffffff;
+}
+
+/* LEFT IMAGE SECTION */
+.bg-register-image {
+    background-color: #6f42c1;
+    background-image: url("../img/register.svg"); /* optional */
+    background-position: center;
+    background-size: cover;
+}
+
+/* TITLE */
+h1.h4 {
+    color: #6f42c1;
+    font-weight: 700;
+}
+
+/* SUBTITLE TEXT */
+.text-muted {
+    color: #858796 !important;
+}
+
+/* INPUT FIELD */
+.form-control-user {
+    border-radius: 50px;
+    padding: 1.4rem 1rem;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+}
+
+/* INPUT FOCUS */
+.form-control-user:focus {
+    border-color: #6f42c1;
+    box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.3);
+}
+
+/* REGISTER BUTTON */
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #59339d;
+    border-color: #59339d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.4);
+}
+
+/* SECONDARY BUTTON (Login link) */
+.btn-secondary {
+    border-radius: 50px;
+}
+
+/* LINKS */
+a {
+    color: #6f42c1;
+}
+
+a:hover {
+    color: #59339d;
+    text-decoration: underline;
+}
+
+/* ICON (optional) */
+.fa-user-plus {
+    color: #6f42c1;
+}
+
+/* ALERT MESSAGE */
+.alert {
+    border-radius: 12px;
+    animation: fadeDown 0.4s ease;
+}
+
+/* FOOTER TEXT */
+small {
+    color: #858796;
+}
+
+/* ANIMATION */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
